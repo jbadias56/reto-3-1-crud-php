@@ -20,9 +20,9 @@ $result = $conn->query("SELECT * FROM usuarios");
     <title>CRUD PHP</title>
 </head>
 <body>
-   <h1>CRUD de Usuarios - Versión Main</h1>
+<h1>CRUD de Usuarios - Versión Final</h1>
 
-    <!-- CREATE -->
+<-- CREATE -->
     <h2>Añadir usuario</h2>
     <form method="POST" action="create.php">
         <input type="text" name="nombre" placeholder="Nombre" required>
