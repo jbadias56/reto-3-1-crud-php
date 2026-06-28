@@ -32,7 +32,7 @@ $result = $conn->query("SELECT * FROM usuarios");
 
     <!-- READ -->
     <h2>Lista de usuarios</h2>
-    <table border="1">
+    <table border="1" style="border-collapse: collapse; width: 100%;">
         <tr><th>ID</th><th>Nombre</th><th>Email</th><th>Acciones</th></tr>
         <?php while($row = $result->fetch_assoc()): ?>
         <tr>
