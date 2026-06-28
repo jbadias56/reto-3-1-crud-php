@@ -41,7 +41,7 @@ $result = $conn->query("SELECT * FROM usuarios");
             <td><?= $row['email'] ?></td>
             <td>
                 <a href="edit.php?id=<?= $row['id'] ?>">Editar</a>
-                <a href="delete.php?id=<?= $row['id'] ?>">Eliminar</a>
+                <a href="delete.php?id=<?= $row['id'] ?>" onclick="return confirm('¿Estás seguro de eliminar este usuario?')">Eliminar</a>
             </td>
         </tr>
         <?php endwhile; ?>
