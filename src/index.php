@@ -20,7 +20,7 @@ $result = $conn->query("SELECT * FROM usuarios");
     <title>CRUD PHP</title>
 </head>
 <body>
-    <h1>CRUD de Usuarios</h1>
+    <h1>CRUD de Usuarios - Reto 3.1</h1>
 
     <!-- CREATE -->
     <h2>Añadir usuario</h2>
