@@ -12,6 +12,7 @@ if ($conn->connect_error) {
 
 // READ
 $result = $conn->query("SELECT * FROM usuarios");
+echo "ESTO ES UN ERROR";
 ?>
 <!DOCTYPE html>
 <html lang="es">
