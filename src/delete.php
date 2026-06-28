@@ -11,6 +11,8 @@ if ($conn->connect_error) {
 }
 
 $id = $_GET['id'];
-$conn->query("DELETE FROM usuarios WHERE id=$id");
+$stmt = $conn->prepare("DELETE FROM usuarios WHERE id=?");
+$stmt->bind_param("i", $id);
+$stmt->execute();
 header("Location: index.php");
 ?>
