@@ -20,7 +20,7 @@ $result = $conn->query("SELECT * FROM usuarios");
     <title>CRUD PHP</title>
 </head>
 <body>
-    <h1>CRUD de Usuarios</h1>
+    <h1>CRUD de Usuarios - Reto 3.1</h1>
 
     <!-- CREATE -->
     <h2>Añadir usuario</h2>
@@ -32,7 +32,7 @@ $result = $conn->query("SELECT * FROM usuarios");
 
     <!-- READ -->
     <h2>Lista de usuarios</h2>
-    <table border="1">
+    <table border="1" style="border-collapse: collapse; width: 100%;">
         <tr><th>ID</th><th>Nombre</th><th>Email</th><th>Acciones</th></tr>
         <?php while($row = $result->fetch_assoc()): ?>
         <tr>
@@ -41,7 +41,7 @@ $result = $conn->query("SELECT * FROM usuarios");
             <td><?= $row['email'] ?></td>
             <td>
                 <a href="edit.php?id=<?= $row['id'] ?>">Editar</a>
-                <a href="delete.php?id=<?= $row['id'] ?>">Eliminar</a>
+                <a href="delete.php?id=<?= $row['id'] ?>" onclick="return confirm('¿Estás seguro de eliminar este usuario?')">Eliminar</a>
             </td>
         </tr>
         <?php endwhile; ?>
